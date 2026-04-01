@@ -1,0 +1,11 @@
+version: "1"
+servers:
+  context7:
+    image: acuvity/mcp-server-context-7:latest
+    url: http://context7:${INTERNAL_PORT}/mcp
+    transport: streamable-http
+
+  searxng:
+    image: isokoliuk/mcp-searxng:latest
+    url: http://searxng:${INTERNAL_PORT}/mcp
+    transport: streamable-http
